@@ -20,6 +20,7 @@
 				<li><a href='#'>기본정보</a></li>
 			</ul>
 		</li>
+		<li><a href="#">후기게시판</a></li>
 		<li><a href="#">회사소개</a></li>
 		<li><a href="#">FAQ</a></li>
 		<li><a href="#">로그인</a>
@@ -29,29 +30,27 @@
 <div id='content'>
 	<section id="hero">
 		<div class="bkg-img" style="background-image:url('https://farm4.staticflickr.com/3372/3299941029_0074286419_o.jpg');"></div>
-		<div class="hero-content">
 			<div id='hero-content'>
 				<span id='start'>서울 출발</span>
-					<span id='startDate'>가는 날</span>
-					<input type='date' id='date1' placeholder="날짜 선택"
-						   required aria-required="true"/>
-					<span id='amPm1'>
-						<input type='radio' value='am' name='time'/>오전
-						<input type='radio' value='pm' name='time'/>오후
-					</span>
+				<span id='startDate'>가는 날</span>
+				<input type='date' id='date1' placeholder="날짜 선택"
+					   required aria-required="true"/>
+				<span id='amPm1'>
+					<input type='radio' value='am' name='time1'/>오전
+					<input type='radio' value='pm' name='time1'/>오후
+				</span>
 				<span id='endDate'>오는 날</span>
-					<input type='date' id='date2' placeholder="날짜 선택"
-						   required aria-required="true"/>
-					<span id='amPm2'>
-						<input type='radio' value='am' name='time'/>오전
-						<input type='radio' value='pm' name='time'/>오후
-					</span>
-					<span id='people'>인원</span>
-					<input type='text' size='1' id='peopleSu'/>
-					</span>
-					<input type='button' id='btnSearch' value='Search'/>
+				<input type='date' id='date2' placeholder="날짜 선택"
+					   required aria-required="true"/>
+				<span id='amPm2'>
+					<input type='radio' value='am' name='time2'/>오전
+					<input type='radio' value='pm' name='time2'/>오후
+				</span>
+				<span id='people'>인원</span>
+				<input type='text' size='5' id='peopleSu'/>
+				</span>
+				<input type='button' id='btnSearch' value='Search'/>
 			</div>
-		</div>
 	</section>
 	
 	<section class="packages">
