@@ -7,26 +7,28 @@
 <title>index.jsp</title>
 <link rel="stylesheet" href="css/index.css"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script defer src='../js/index.js'></script>
 </head>
 <body>
-<header>
+<header id='header'>
 <h2><a href="#">Travel Maker</a></h2>	
 <div id='menu'>
 	<ul>
 		<li><a href="#">마이페이지</a>
-			<ul>
-				<li><a href='#'>내여행</a></li>
-				<li><a href='#'>기본정보</a></li>
+			<ul id='block'>
+				<li><a href='#' class='btnMytrip'>내여행</a></li>
+				<li><a href='#' class='btnMyInfo'>기본정보</a></li>
 			</ul>
 		</li>
-		<li><a href="#">후기게시판</a></li>
+		<li><a href="#" class='reviewBoard'>후기게시판</a></li>
 		<li><a href="#">회사소개</a></li>
 		<li><a href="#">FAQ</a></li>
 		<li><a href="#">로그인</a>
 	</ul>		
 </div>
 </header>
+<div id='empty'></div>
 <div id='content'>
 	<section id="hero">
 		<div class="bkg-img" style="background-image:url('https://farm4.staticflickr.com/3372/3299941029_0074286419_o.jpg');"></div>
@@ -92,15 +94,17 @@
 	</section>	
 </div>
 
-<footer>
-	<p>Images courtesy of <a href="http://www.photosforclass.com/"></a>Photos for Class</p>
-	<p>Visit Goa and have a good time doing it, when you use one or more of our tours...</p>
-	<ul>
-		<li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-		<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-		<li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
-	</ul>
-</footer>	
+<div id='footer'>
+	<footer>
+		<p>Images courtesy of <a href="http://www.photosforclass.com/"></a>Photos for Class</p>
+		<p>Visit Goa and have a good time doing it, when you use one or more of our tours...</p>
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+			<li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
+		</ul>
+	</footer>	
+</div>
 														 
 <!--
 https://farm5.staticflickr.com/4005/4267674623_a786e4a440_o.jpg
