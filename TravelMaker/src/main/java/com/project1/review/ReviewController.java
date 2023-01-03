@@ -1,0 +1,15 @@
+package com.project1.review;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+@RestController
+public class ReviewController {
+	@RequestMapping("/review/reviewView")
+	public ModelAndView reviewView() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("review/reviewView");
+		return mv;
+	}
+}

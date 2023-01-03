@@ -1,6 +1,12 @@
 /**
  * 
  */
+ /**후기게시판 연결  */
+ $('.reviewBoard').on('click', function(){
+	$('#content').load('/review/reviewView')
+	
+})
+
 
 $('.btnMyInfo').on('click',function(){
 	 $('#content').load('/myInfo/myInfo');
