@@ -176,7 +176,8 @@ section:not(#hero):nth-child(even) {
 #peopleSu{
 	grid-area: su;
 	align-self: center;
-	justify-self: center;
+	justify-self: start;
+	text-align:center;
 }
 #btnSearch{
   grid-area:button;
