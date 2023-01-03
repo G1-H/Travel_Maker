@@ -72,7 +72,6 @@ header {
 	display:block;
 }
 
-
 @media (max-width:800px) {
 	header {
 		padding:20px 50px;
@@ -122,10 +121,9 @@ section:not(#hero):nth-child(even) {
 
 #hero #hero-content{
 	position: absolute;
+	margin:auto;
 	width: 630px;
 	height: 230px;
-	left: 390px;
-	top: 230px;
 	background: #F59651;
 	opacity:0;
 	padding:30px;
