@@ -3,7 +3,7 @@
  */
  /**후기게시판 연결  */
  $('.reviewBoard').on('click', function(){
-	$('#content').load('/review/reviewView')
+	$('#content').load('/review/reviewSelect')
 	
 })
 

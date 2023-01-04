@@ -6,6 +6,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class ReviewController {
+	@RequestMapping("/review/reviewSelect")
+	public ModelAndView reviewSelect() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("review/reviewSelect");
+		return mv;
+	}
+	
 	@RequestMapping("/review/reviewView")
 	public ModelAndView reviewView() {
 		ModelAndView mv = new ModelAndView();
