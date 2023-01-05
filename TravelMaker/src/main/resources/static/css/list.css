@@ -1,0 +1,63 @@
+@charset "UTF-8";
+#listBack{
+	width : 75vw;
+	margin : 20px auto;
+}
+.title{
+	margin-top : 3vh;
+	margin-bottom : 5vh;
+}
+.btn-group button {
+    background-color: rgb(235, 233, 230);;
+    border: 3px solid #FFF;
+    color: black;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+    width : 20%;
+    font-size : 25px;
+    text-align : bold;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group button:hover {
+    background-color: tomato;
+    color : #fff;
+}
+
+/*검색창----------------------------------*/
+
+.searchTxt {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 15px;
+  line-height: 40px;
+  border-radius : 6px;
+  width:30%;
+  height : 53px;
+  margin : 10px;
+}
+
+.search-btn {
+  float : right;
+  color: #EDEDED;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #949BA0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : 10px;
+}

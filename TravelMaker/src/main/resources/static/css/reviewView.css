@@ -1,0 +1,109 @@
+@charset "UTF-8";
+#rs_main{
+	display: grid;
+	grid-template-columns : 1fr;
+}
+
+#rs_blank_65px{
+	height:65px;
+}
+#rs_blank_30px{
+	height:30px;
+}
+
+#rs_title{
+	height: 80px;
+	width : 70%;
+	margin: auto;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	padding : 20px;
+}
+#rs_title_location{
+	background-color : #f1f6fa;
+	width: 60px;
+	padding : 2px;
+	color: #3f8ef1;
+	border-radius : 20%;
+	text-align: center;
+}
+#rs_content{
+	display: grid;
+	width : 70%;
+	margin : auto;
+	line-height: 30px;
+}
+#rs_content_detail{
+	display : grid;
+	grid-template-columns : 1fr;
+	gap : 5px;
+}
+#rs_content_detail_1{
+	display : grid;
+	grid-template-columns : auto auto 1fr;
+	gap : 5px;
+}
+#rs_content_user_photo{
+	background-image: url('../images/chaeji-profile-test.png');
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+	align-self : end;
+	border-radius : 50%;
+}
+
+#rs_content_detail_2{
+	display : grid;
+	grid-template-columns : 30px auto auto auto auto 1fr ;
+	gap : 5px;
+}
+
+#rs_view_icon{
+	background-image: url('../images/view-icon.png');
+	background-size: cover;
+	width: 15px;
+	height: 15px;
+	align-self : end;
+	grid-column: 2/3;
+}
+#rs_view_num{
+	line-height: 15px;
+	grid-column: 3/4;
+}
+#rs_heart_icon{
+	background-image: url('../images/heart-icon.png');
+	background-size: cover;
+	width: 15px;
+	height: 15px;
+	align-self : end;
+	grid-column: 4/5;
+}
+#rs_heart_num{
+	line-height: 15px;
+	grid-column: 5/6;
+}
+#rs_heart_icon:hover{
+	cursor : pointer;
+}
+#rs_copy_icon{
+	background-image: url('../images/copy-url-icon.png');
+	background-size: cover;
+	width: 15px;
+	height: 15px;
+	justify-self : end;
+	grid-column: 6/7;
+}
+#rs_copy_icon:hover{
+	cursor : pointer;
+}
+#rs_content_plan_day{
+	background-color : #f1f6fa;
+	width: 60px;
+	padding : 2px;
+	color: #3f8ef1;
+	border-radius : 20%;
+	text-align: center;
+}
+#rs_blank_25px{
+	height:25px;
+	border-bottom: 1px dashed black;
+}

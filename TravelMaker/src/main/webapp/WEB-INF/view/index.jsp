@@ -8,7 +8,9 @@
 <link rel="stylesheet" href="css/index.css"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	38fcbbc356cdd719e19ce18e5b27584d"></script>
+
 <script defer src='../js/index.js'></script>
 </head>
 <body>
@@ -26,8 +28,9 @@
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnCompanyInfo'>회사소개</a></li>
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnFAQ'>FAQ</a></li>
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnLogin'>로그인</a>
-	</ul>
-	
+
+	</ul>		
+
 </div>
 </header>
 <div id='empty'></div>
