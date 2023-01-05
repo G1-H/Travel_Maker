@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="css/index.css"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	38fcbbc356cdd719e19ce18e5b27584d"></script>
+
 <script defer src='../js/index.js'></script>
 </head>
 <body>
@@ -25,7 +28,9 @@
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnCompanyInfo'>회사소개</a></li>
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnFAQ'>FAQ</a></li>
 		<li class='indexMenuLi'><a href="#" class='indexMenuA btnLogin'>로그인</a>
+
 	</ul>		
+
 </div>
 </header>
 <div id='empty'></div>
@@ -36,14 +41,14 @@
 				<span id='start'>서울 출발</span>
 				<span id='startDate'>가는 날</span>
 				<input type='date' id='date1' placeholder="날짜 선택"
-					   required aria-required="true"/>
+					   required aria-required="true" class="dateSelector"/>
 				<span id='amPm1'>
 					<input type='radio' value='am' name='time1'/>오전
 					<input type='radio' value='pm' name='time1'/>오후
 				</span>
 				<span id='endDate'>오는 날</span>
 				<input type='date' id='date2' placeholder="날짜 선택"
-					   required aria-required="true"/>
+					   required aria-required="true" class="dateSelector"/>
 				<span id='amPm2'>
 					<input type='radio' value='am' name='time2'/>오전
 					<input type='radio' value='pm' name='time2'/>오후
