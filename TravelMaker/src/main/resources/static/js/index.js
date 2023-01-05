@@ -10,11 +10,6 @@
 $('.btnMyInfo').on('click',function(){
     $('#content').load('/myInfo/myInfo');
  })
- /* 마이페이지-내여행 연결 */
-/* $('.btnMyTour').on('click',function(){
-    $('#content').load('/myTour/myTourSelect');
- })
- */  
  function navigo (){
    const hero = document.querySelector('#hero');   //hero부분 획득
    const fixStart = hero.clientHeight;      //hero 높이
@@ -115,6 +110,6 @@ if(width_size<=450){
 })
 	 }else{
  $('.btnMyTour').on('click',function(){
-	 console.log(width_size+"넘");
+	 $('#content').load('/planner/planner');
 	 
  })}
