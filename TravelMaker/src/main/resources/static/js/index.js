@@ -8,6 +8,17 @@
 	$('#content').load('/review/reviewSelect')
 	
 })
+/**FAQ 연결 */
+$('.btnFAQ').on('click',function(){
+	$('#content').load('/faq/faqView')
+})
+
+/**회사소개 연결  */
+
+$('.btnCompanyInfo').on('click',function(){
+    $('#content').load('/companyInfo/companyInfoView');
+	
+})
 /* 마이페이지-기본정보 연결 */
 $('.btnMyInfo').on('click',function(){
 	 $('#content').load('/myInfo/myInfo');

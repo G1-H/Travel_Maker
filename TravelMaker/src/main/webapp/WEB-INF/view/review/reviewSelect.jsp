@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>후기 게시판</title>
 		<link rel='stylesheet' href='../css/reviewSelect.css'>
-		<script src='../js/reviewSelect.js'></script>
+		<script defer src='../js/reviewSelect.js'></script>
 	</head>
 	<body>
 		<div id='rs_main'>
