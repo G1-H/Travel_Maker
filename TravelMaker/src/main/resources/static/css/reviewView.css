@@ -19,10 +19,10 @@
 	padding : 20px;
 }
 #rv_title_location{
-	background-color : #f1f6fa;
+	background-color : #FECCBE;
 	width: 60px;
 	padding : 2px;
-	color: #3f8ef1;
+	color: #ff6347;
 	border-radius : 20%;
 	text-align: center;
 }
@@ -139,10 +139,10 @@
 	transform:scale(1.2);
 }
 #rv_content_plan_day{
-	background-color : #f1f6fa;
+	background-color : #FECCBE;
 	width: 60px;
 	padding : 2px;
-	color: #3f8ef1;
+	color: #ff6347;
 	border-radius : 20%;
 	text-align: center;
 }

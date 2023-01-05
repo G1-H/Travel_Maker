@@ -27,7 +27,7 @@
 }
 #rs_refresh:hover, #rs_filter_region:hover, #rs_filter_location:hover, #rs_filter_period:hover{
 	cursor : pointer;
-	color: #3f8ef1;
+	color: #Ff6347;
 	transform:scale(1.2);
 }
 #rs_contents_filter:hover{
@@ -187,7 +187,7 @@
 }
 .rs_content_2:hover{
 	cursor : pointer;
-	color: #3f8ef1;
+	color: #Ff6347;
 }
 .rs_content_title{
 	grid-column : 2/3;
@@ -203,10 +203,10 @@
 	grid-template-rows : 5px 1fr 5px;
 }
 .rs_content_location{
-	background-color : #f1f6fa;
+	background-color : #FECCBE;
 	width: 60px;
 	padding : 2px;
-	color: #3f8ef1;
+	color: #ff6347;
 	border-radius : 20%;
 	text-align: center;
 	grid-row : 2/3;
@@ -256,7 +256,7 @@
 }
 
 #rs_page_begin,#rs_page_end {
-  background-color: #0095ff;
+  background-color: #ff6347;
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
@@ -283,7 +283,7 @@
 
 #rs_page_begin:hover,#rs_page_end:hover,
 #rs_page_begin:focus,#rs_page_end:focus {
-  background-color: #07c;
+  background-color: #ff5330;
 }
 
 #rs_page_begin:focus,#rs_page_end:focus {
@@ -342,12 +342,12 @@
 
 
 #rs_page_before, #rs_page_after{
-  background-color: #e1ecf4;
+  background-color: #ffa899;
   border-radius: 3px;
-  border: 1px solid #7aa7c7;
+  border: 1px solid #ff6347;
   box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
   box-sizing: border-box;
-  color: #39739d;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
@@ -369,8 +369,8 @@
 
 #rs_page_before:hover,#rs_page_after:hover,
 #rs_page_before:focus,#rs_page_after:focus {
-  background-color: #b3d3ea;
-  color: #2c5777;
+  background-color: #ffb447;
+  color: #ff6347;
 }
 
 #rs_page_before:focus,#rs_page_after:focus {
