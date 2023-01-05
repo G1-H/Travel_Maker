@@ -1,6 +1,19 @@
 /**
  * 
  */
+ /**후기게시판 연결  */
+ $('.btnReviewBoard').on('click', function(){
+	$('#content').load('/review/reviewSelect')
+	
+})
+/* 마이페이지-기본정보 연결 */
+$('.btnMyInfo').on('click',function(){
+	 $('#content').load('/myInfo/myInfo');
+ })
+ /* 마이페이지-내여행 연결 */
+ $('.btnMyTour').on('click',function(){
+	 $('#content').load('/myTour/myTourSelect');
+ })
 
  function navigo (){
 	const hero = document.querySelector('#hero');	//hero부분 획득
@@ -14,13 +27,30 @@
 	     header.style.position='fixed';
 	     header.style.backgroundColor='#697c89';
 	     header.style.opacity=0.55;
+	   }else {
+			if(document.getElementById("hero")){
+				header.style.position='absolute';
+				header.style.backgroundColor='rgb(255 255 255 / 0%)';
+				header.style.opacity=0; 			 
+			}else{
+				header.style.position='fixed';
+		     	header.style.backgroundColor='#697c89';
+		     	header.style.opacity=0.55;
+			}
 	   }
-	   else {
-	     header.style.position='absolute';
-	     header.style.backgroundColor='rgb(255 255 255 / 0%)';
-	     header.style.opacity=0;
-	     }
-	 } 
-  
+	 }
 }
 navigo()
+
+
+function div(){
+	const header = document.querySelector('header');
+	const empty = document.querySelector('#empty');
+	$('.indexMenuA').on('click',function(){
+		empty.style.height='65px';
+		header.style.backgroundColor='#697c89';
+		header.style.opacity=0.55;
+	});
+}
+div()
+
