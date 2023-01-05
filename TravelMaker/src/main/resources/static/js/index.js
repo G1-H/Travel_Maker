@@ -2,14 +2,17 @@
  * 
  */
  /**후기게시판 연결  */
- $('.reviewBoard').on('click', function(){
+ $('.btnReviewBoard').on('click', function(){
 	$('#content').load('/review/reviewSelect')
 	
 })
-
-
+/* 마이페이지-기본정보 연결 */
 $('.btnMyInfo').on('click',function(){
 	 $('#content').load('/myInfo/myInfo');
+ })
+ /* 마이페이지-내여행 연결 */
+ $('.btnMyTour').on('click',function(){
+	 $('#content').load('/myTour/myTourSelect');
  })
 
  function navigo (){
@@ -43,22 +46,11 @@ navigo()
 function div(){
 	const header = document.querySelector('header');
 	const empty = document.querySelector('#empty');
-	$('.btnMyInfo').on('click',function(){
+	$('.indexMenuA').on('click',function(){
 		empty.style.height='65px';
 		header.style.backgroundColor='#697c89';
 		header.style.opacity=0.55;
 	});
- 	$('.btnSearch').on('click',function(){
-		empty.style.height='65px';
-		header.style.backgroundColor='#697c89';
-		header.style.opacity=0.55;
- 	});
- 	$('.reviewBoard').on('click',function(){
-		empty.style.height='65px';
-		header.style.backgroundColor='#697c89';
-		header.style.opacity=0.55;
- 	});
-
 }
 div()
 
