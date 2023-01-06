@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <!-- include summernote css/js -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet"> 
@@ -19,7 +21,7 @@
 </head>
 <body>
 <header id='IndexHeader'>
-<h2><a href="#" class='TravelMaker'>Travel Maker</a></h2>	
+<h2><a href="/" class='TravelMaker'>Travel Maker</a></h2>	
 <div id='menu'>
 	<ul class='indexUl'>
 		<li><a href="#" class='indexMyPage'>마이페이지</a>

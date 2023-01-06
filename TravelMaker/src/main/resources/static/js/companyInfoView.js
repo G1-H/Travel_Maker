@@ -16,3 +16,4 @@ var div = document.querySelectorAll('div')
 for(i=4; i<26; i++){
 	obs1.observe(div[i]);
 }
+

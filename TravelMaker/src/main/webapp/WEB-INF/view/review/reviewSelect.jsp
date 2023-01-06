@@ -5,19 +5,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>후기 게시판</title>
-		<link rel='stylesheet' href='../css/reviewSelect.css'>
+		<link rel='stylesheet' media='screen and (min-width : 450px)' href='../css/reviewSelect.css'>
+		<link rel='stylesheet' media='screen and (max-width : 450px)' href='../css/reviewSelectMobile.css'>
 		<script defer src='../js/reviewSelect.js'></script>
 	</head>
 	<body>
 		<div id='rs_main'>
 			<div id='rs_blank_65px'></div>
 			<div id='rs_title'>
-				<h2>후기 게시판</h2>
+				<div>후기 게시판</div>
 				<div>여러분의 여행을 공유해주세요.</div>
 			</div>
 			<div id='rs_blank_30px'></div>
 			<div id='rs_header'>
-				<div id='rs_refresh'></div>
 				<div id='rs_header_inner'>
 					<div id='rs_filter_period'>기간별</div>
 					<div id='rs_filter_region'>도별</div>
@@ -31,6 +31,7 @@
 			
 			<div id='rs_contents'>
 				<div id='rs_contents_header'>
+					<div id='rs_refresh'></div>
 					<div id='rs_contents_filter'>
 						<div id= 'rs_contents_filter_list'>
 							<div id='rs_contents_filter_recent'>최근순</div>
@@ -45,7 +46,7 @@
 					<div class='rs_content_1'>
 						<div class='rs_content_user'>
 							<div id='rs_content_user_photo'></div>
-							<div id='rs_content_user_name'>채찌</div>
+							<div id='rs_content_user_name'>채찌채찌채찌</div>
 						</div>
 						<div class='rs_content_date'>2022-12-25 (일)</div>
 					</div>

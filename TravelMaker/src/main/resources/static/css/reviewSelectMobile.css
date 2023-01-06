@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+html{
+	font-size: 10px;
+}
 #rs_main{
 	display : grid;
 	grid-template-columns : 1fr;
@@ -9,25 +11,25 @@
 	height:65px;
 }
 #rs_title{
-	height: 80px;
-	width : 70%;
+	height: 10vh;
+	width : 95vw;
 	margin: auto;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-	padding : 20px;
+	padding : 3vw;
 }
 #rs_title div:nth-child(1){
-	font-size : 1.5rem;
-	font-weight: bolder;
+	font-size : 3rem;
+	font-weight : bolder;
 }
 #rs_title div:nth-child(2){
-	font-size : 1.2rem;
+	font-size : 2rem;
 }
 #rs_blank_30px{
 	height:30px;
 }
 #rs_header{
 	display: grid;
-	width : 70%;
+	width : 95%;
 	margin: auto;
 	grid-template-columns: 1fr 1fr 1fr;	
 	
@@ -44,15 +46,15 @@
 #rs_refresh{
 	background-image:url('../images/refresh-icon.png');
 	background-size: cover;
-	width: 15px;
-	height: 15px;
+	width: 3vw;
+	height: 3vw;
 	align-self : center;
 	justify-self: start;
 	
 }
 #rs_header_inner{
 	grid-column : 2/3;
-	width : 600px;
+	width : 90vw;
 	margin : auto;
 	display : grid;
 	justify-items : center;
@@ -60,16 +62,19 @@
 	gap : 5px;
 }
 #rs_filter_period{
-	height: 30px;
-	line-height: 30px;
+	height: 1.5vh;
+	line-height: 1.5vh;
+	font-size : 2rem;
 }
 #rs_filter_region{
-	height: 30px;
-	line-height: 30px;
+	height: 1.5vh;
+	line-height: 1.5vh;
+	font-size : 2rem;
 }
 #rs_filter_location{
-	height: 30px;
-	line-height: 30px;
+	height: 1.5vh;
+	line-height: 1.5vh;
+	font-size : 2rem;
 }
 
 #rs_search{
@@ -105,12 +110,12 @@
 	display : grid;
 	grid-template-columns: 1fr;
 	justify-items : stretch;
-	width : 70%;
+	width : 95%;
 	margin : auto;
 }
 #rs_contents_header{
-	display: grid;
-	grid-template-columns : 1fr 1fr;
+	display : grid;
+	grid-template-columns: 1fr 1fr;
 }
 #rs_contents_filter{
 	right: 10px;
@@ -118,7 +123,6 @@
 	background-size: cover;
 	width: 20px;
 	height: 20px;
-	justify-self : end;
 }
 #rs_contents_filter_list{
 	width : 40px;
@@ -158,23 +162,22 @@
 }
 .rs_content{
 	display: grid;
-	grid-template-rows : 8px repeat(2, 30px) 1fr 8px;
+	grid-template-rows : 0.5vh 3vh 2vh 3vh 1vh;
 	border-top: 1px solid black;
+	gap : 0.5vh;
 	
-}
-.rs_contet_blank{
-	height: 18.5px;
 }
 .rs_content_1{
 	display: grid;
 	grid-template-columns: auto 1fr;
-	gap : 5px;
+	gap : 1vh;
 	
 }
 .rs_content_user{
 	display: grid;
-	grid-template-columns: 4vh 1fr;
-	gap: 5px;
+	grid-template-columns: 3vh 1fr;
+	font-size : 1.2rem;
+	gap: 1vh;
 }
 #rs_content_user_photo{
 	background-image: url('../images/chaeji-profile-test.png');
@@ -187,15 +190,16 @@
 }
 #rs_content_user_name{
 	justify-self: start;
-	line-height : 3vh;
+	line-height: 3vh;
 }
 .rs_content_date{
-	line-height : 3vh;
+	font-size : 1.2rem;
+	line-height: 3vh;
 }
 .rs_content_2{
 	font-size : 1.5rem;
 	display: grid;
-	grid-template-columns: 15px 1fr;
+	grid-template-columns: 0.5vh 1fr;
 }
 .rs_content_2:hover{
 	cursor : pointer;
@@ -212,12 +216,14 @@
 	grid-column : 2/3;
 	justify-self : start;
 	display : grid;
-	grid-template-rows : 5px 1fr 5px;
+	grid-template-rows : 0.5vh 1fr 0.5vh;
 }
 .rs_content_location{
+	font-size: 2rem;
 	background-color : #FECCBE;
-	width: 60px;
-	padding : 2px;
+	width: 3vh;
+	height: 2vh;
+	padding : 0.2vh;
 	color: #ff6347;
 	border-radius : 20%;
 	text-align: center;
@@ -238,8 +244,8 @@
 .rs_content_view_icon{
 	background-image: url('../images/view-icon.png');
 	background-size: cover;
-	width: 15px;
-	height: 15px;
+	width: 1.3vh;
+	height: 1.3vh;
 	align-self : end;
 }
 .rs_content_heart{
@@ -250,20 +256,20 @@
 .rs_content_heart_icon{
 	background-image: url('../images/heart-icon.png');
 	background-size: cover;
-	width: 15px;
-	height: 15px;
+	width: 1.3vh;
+	height: 1.3vh;
 	align-self : end;
 }
 #rs_page_btn{
 	justify-self : center;
 	display : grid;
-	width: 80vh;
+	width: 90vw;
 	grid-template-columns : repeat(9, 1fr);
 	justify-items : center;
 	gap : 2px;
 }
 #rs_page_btn div{
-	width : 100%;
+	width : 95%;
 	text-align: center;
 }
 

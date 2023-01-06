@@ -64,32 +64,22 @@ navigo()
 
 var width_size = window.outerWidth;
 if(width_size<=450){
-	const logo = document.querySelector('.TravelMaker');
-	logo.style.marginLeft ='10px';
-   	const header2 = document.querySelector('header');
-	header2.style.padding='35px 5px 10px 0px';
-   	const navList = document.querySelector('#menu>ul>li');
-   	navList.style.margin='0 35px';
-   	navList.style.width='fit-content';
-   	const hero = document.querySelector('#hero');
-	hero.style.minHeight='50vh';
-	hero.style.gridTemplateAreas='". start ." "startDate date1 amPm1" "endDate date2 amPm2" "people su ." "button button button"';
-   	const heroContent = document.querySelector('#hero-content');
-	heroContent.style.width='90%';
-	heroContent.style.height='30%';
-	heroContent.style.fontSize='25px';
-	const btnSearch = document.querySelector('#btnSearch');
-	btnSearch.style.fontSize='30px';
-	btnSearch.style.fontWeight='bold';
-	btnSearch.style.height="60px";
-	const dateSelector = document.querySelector('.dateSelector');
-	dateSelector.style.height="25px";
-	dateSelector.style.fontSize="22px";
-	const dateSelector2 = document.querySelector('#date2');
-	dateSelector2.style.height="25px";
-	dateSelector2.style.fontSize="22px";
-	}
 
+	
+
+   
+	 $('.btnLogin').on('click',function(){
+	    $('#content').load('/mplan/mPlanner');
+	    console.log(width_size);
+	    
+	})
+	    }else{
+	 $('.btnLogin').on('click',function(){
+	    $('#content').load('/planner/planner');
+	    
+ })}
+
+function div(){
 	const header = document.querySelector('header');
 	const empty = document.querySelector('#empty');
 	$('.indexMenuA').on('click',function(){
@@ -98,5 +88,5 @@ if(width_size<=450){
 		header.style.opacity=0.55;
 	});
 }
-div()
+div();
 
