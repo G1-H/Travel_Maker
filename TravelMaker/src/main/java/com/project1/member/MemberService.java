@@ -1,7 +1,7 @@
-package com.project1.order;
+package com.project1.member;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrderService {
+public class MemberService {
 }
