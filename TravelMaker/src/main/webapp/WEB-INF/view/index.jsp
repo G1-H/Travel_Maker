@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>index.jsp</title>
-<link rel="stylesheet" href="css/index.css"/>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
-
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" media="screen and (min-width :450px)" href="css/index.css"/>
+<link rel="stylesheet" media="screen and (max-width :450px)" href="css/mobileIndex.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
 
 <!-- include summernote css/js -->
@@ -21,6 +21,7 @@
 </head>
 <body>
 <header id='IndexHeader'>
+<div id='IndexHeader_blank'></div>
 <h2><a href="/" class='TravelMaker'>Travel Maker</a></h2>	
 <div id='menu'>
 	<ul class='indexUl'>
@@ -38,6 +39,7 @@
 	</ul>		
 
 </div>
+<div id='IndexHeader_blank'></div>
 </header>
 <div id='empty'></div>
 <div id='content'>

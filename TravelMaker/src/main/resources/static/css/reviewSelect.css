@@ -110,7 +110,7 @@
 }
 #rs_contents_header{
 	display: grid;
-	grid-template-columns : 1fr 1fr;
+	grid-template-columns: 1vw 1fr 1fr 1vw;
 }
 #rs_contents_filter{
 	right: 10px;

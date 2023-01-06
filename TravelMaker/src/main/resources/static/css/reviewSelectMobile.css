@@ -115,7 +115,7 @@ html{
 }
 #rs_contents_header{
 	display : grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 3vw 1fr 1fr 3vw;
 }
 #rs_contents_filter{
 	right: 10px;
@@ -123,6 +123,7 @@ html{
 	background-size: cover;
 	width: 20px;
 	height: 20px;
+	justify-self: end;
 }
 #rs_contents_filter_list{
 	width : 40px;
@@ -197,7 +198,7 @@ html{
 	line-height: 3vh;
 }
 .rs_content_2{
-	font-size : 1.5rem;
+	font-size : 1.8rem;
 	display: grid;
 	grid-template-columns: 0.5vh 1fr;
 }
@@ -210,7 +211,7 @@ html{
 }
 .rs_content_3{
 	display : grid;
-	grid-template-columns: 15px 1fr 1fr 15px;
+	grid-template-columns: 2vw 1fr 1fr 15px;
 }
 .rs_content_3_1{
 	grid-column : 2/3;
@@ -219,9 +220,9 @@ html{
 	grid-template-rows : 0.5vh 1fr 0.5vh;
 }
 .rs_content_location{
-	font-size: 2rem;
+	font-size: 1.3rem;
 	background-color : #FECCBE;
-	width: 3vh;
+	width: 10vw;
 	height: 2vh;
 	padding : 0.2vh;
 	color: #ff6347;

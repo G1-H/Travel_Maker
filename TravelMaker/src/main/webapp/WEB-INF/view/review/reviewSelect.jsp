@@ -31,6 +31,7 @@
 			
 			<div id='rs_contents'>
 				<div id='rs_contents_header'>
+					<div id='rs_contents_header_blank'></div>
 					<div id='rs_refresh'></div>
 					<div id='rs_contents_filter'>
 						<div id= 'rs_contents_filter_list'>
@@ -39,6 +40,7 @@
 							<div id='rs_contents_filter_heart'>추천순</div>
 						</div>
 					</div>
+					<div id='rs_contents_header_blank'></div>
 				</div>
 			<%for(int i=0; i<10 ; i++){ %>	
 				<div class='rs_content'>

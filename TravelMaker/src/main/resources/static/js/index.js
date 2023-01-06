@@ -65,9 +65,6 @@ navigo()
 var width_size = window.outerWidth;
 if(width_size<=450){
 
-	
-
-   
 	 $('.btnLogin').on('click',function(){
 	    $('#content').load('/mplan/mPlanner');
 	    console.log(width_size);
@@ -89,4 +86,3 @@ function div(){
 	});
 }
 div();
-
