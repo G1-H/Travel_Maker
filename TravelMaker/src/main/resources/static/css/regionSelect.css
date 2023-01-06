@@ -1,0 +1,100 @@
+
+.regionSelectMain{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	text-align : center;
+	min-height: 500px;
+	gap: 20px;
+	margin : 10vh 10vw;
+	grid-template-rows: auto;
+	/*grid-auto-rows: minmax(10vh, auto);
+	grid-auto-columns: minmax(10vh, auto);*/	
+}
+
+.regionSelectH{
+	margin-top : 1em;
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+	height : 10vh;
+}
+
+.regionSelectAll{
+	height : 80vh;
+	margin-top : 1em;
+	grid-column: 1 / 2;
+	grid-row: 2 / 4;
+	background-image: url("/image/all.jpeg");
+	background-position : center;
+	background-size : cover;
+	filter: grayscale(100%);
+}
+
+.regionSelectAll:hover{
+	filter: grayscale(0%);
+}
+
+.regionSelectGang{
+	margin-top : 1em;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	background-image: url("/image/kangwon.jpg");
+	background-position : center;
+	background-size : cover;
+	filter: grayscale(100%);
+}
+
+.regionSelectGang:hover{
+	filter: grayscale(0%);
+}
+
+.regionSelectGyeong{
+	margin-top : 1em;
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
+	background-image: url("/image/gyeungsang.jpeg");
+	background-position : center;
+	background-size : cover;
+	filter: grayscale(100%);
+}
+
+.regionSelectGyeong:hover{
+	filter: grayscale(0%);
+}
+
+.regionSelectJeolla{
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	background-image: url("/image/jeolla.jpeg");
+	background-position : center;
+	background-size : cover;
+	filter: grayscale(100%);
+}
+
+.regionSelectJeolla:hover{
+	filter: grayscale(0%);
+}
+
+.regionSelectChung{
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+	background-image: url("/image/chungcheong.jpeg");
+	background-position : center;
+	background-size : cover;
+	filter: grayscale(100%);
+}
+
+.regionSelectChung:hover{
+	filter: grayscale(0%);
+}
+
+p{
+	font-size: 3em;
+	font-family: sans-serif;
+	margin-top : 4em;
+	color : white;
+}
+
+.koreap{
+	margin-top : 10em;
+}

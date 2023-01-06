@@ -1,7 +1,17 @@
 /**
  * 
  */
+<<<<<<< Updated upstream
  /**후기게시판 연결  */
+=======
+/**
+ * 
+ */
+
+$('.btnMyInfo').on('click',function(){
+    $('#content').load('/myInfo/myInfo');
+ })
+>>>>>>> Stashed changes
 
 
  $('.btnReviewBoard').on('click', function(){
@@ -97,6 +107,38 @@ if(width_size<=450){
 		header.style.backgroundColor='#697c89';
 		header.style.opacity=0.55;
 	});
+<<<<<<< Updated upstream
+=======
+ 	$('#btnSearch').on('click',function(){
+		empty.style.height='65px';
+		header.style.backgroundColor='#697c89';
+		header.style.opacity=0.55;
+ 	});
+ 	$('.reviewBoard').on('click',function(){
+		empty.style.height='65px';
+		header.style.backgroundColor='#697c89';
+		header.style.opacity=0.55;
+ 	});
+ 	$('#btnB').on('click',function(){
+		empty.style.height='65px';
+		header.style.backgroundColor='#697c89';
+		header.style.opacity=0.55;
+ 	});
+ 	
+
+>>>>>>> Stashed changes
 }
 div()
 
+ $('#btnSearch').on('click',function(){
+	 $('#content').load('/order/regionSelect');
+ })
+ 
+ $('#btnB').on('click',function(){
+	 $('#content').load('/login/signUp');
+ })
+
+  $('#btnLogin').on('click',function(){
+	 $('#content').load('/login/login');
+ })
+ 
