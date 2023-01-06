@@ -8,7 +8,7 @@
 <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/login.css"/>
+<link rel=‘stylesheet’ href=‘/css/login.css’>
 <script defer src='/js/login.js'></script>
 <title>Login</title>
 </head>

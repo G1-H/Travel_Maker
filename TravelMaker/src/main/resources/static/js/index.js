@@ -1,17 +1,7 @@
 /**
  * 
  */
-<<<<<<< Updated upstream
  /**후기게시판 연결  */
-=======
-/**
- * 
- */
-
-$('.btnMyInfo').on('click',function(){
-    $('#content').load('/myInfo/myInfo');
- })
->>>>>>> Stashed changes
 
 
  $('.btnReviewBoard').on('click', function(){
@@ -107,38 +97,47 @@ if(width_size<=450){
 		header.style.backgroundColor='#697c89';
 		header.style.opacity=0.55;
 	});
-<<<<<<< Updated upstream
-=======
- 	$('#btnSearch').on('click',function(){
-		empty.style.height='65px';
-		header.style.backgroundColor='#697c89';
-		header.style.opacity=0.55;
- 	});
- 	$('.reviewBoard').on('click',function(){
-		empty.style.height='65px';
-		header.style.backgroundColor='#697c89';
-		header.style.opacity=0.55;
- 	});
- 	$('#btnB').on('click',function(){
-		empty.style.height='65px';
-		header.style.backgroundColor='#697c89';
-		header.style.opacity=0.55;
- 	});
- 	
-
->>>>>>> Stashed changes
+function div() {
+	const header = document.querySelector('header');
+	const empty = document.querySelector('#empty');
+	$('.btnMyInfo').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
+	$('.btnMyTour').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
+	$('#btnSearch').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
+	$('.reviewBoard').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
+	$('.btnTMInfo').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
+	$('.btnFAQ').on('click', function () {
+		empty.style.height = '65px';
+		header.style.backgroundColor = '#697C89';
+		header.style.opacity = 0.55;
+	});
 }
-div()
+	div()
 
  $('#btnSearch').on('click',function(){
 	 $('#content').load('/order/regionSelect');
  })
- 
- $('#btnB').on('click',function(){
-	 $('#content').load('/login/signUp');
- })
 
-  $('#btnLogin').on('click',function(){
-	 $('#content').load('/login/login');
+  $('.indexMenuLi').on('click',function(){
+	 $('#content').load('/member/login');
  })
  
