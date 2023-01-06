@@ -1,4 +1,4 @@
-package com.project1.list;
+package com.project1.tourapi;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -74,8 +74,6 @@ public class TourAPIGetData {
 					    +"&MobileApp="+ MobileApp
 					    +"&_type="+type
 						+"&contentId=" + contentId;
-						
-			
 			
 			json = readURL(url);
 		
@@ -83,6 +81,33 @@ public class TourAPIGetData {
 			e.printStackTrace();
 		}
 		
+		return json.toString();
+	}
+
+	// 공통정보조회(한건의 데이터만 조회, 상세정보까지 표기)
+	public String getMoreDetailJsonData(String contentId) {
+		StringBuffer json = new StringBuffer();
+
+		try {
+			String url = "http://apis.data.go.kr/B551011/KorService/detailCommon?serviceKey=" + APIkey
+					+"&pageNo="+pageNo
+					+"&numOfRows="+numOfRows
+					+"&MobileOS="+ MobileOS
+					+"&MobileApp="+ MobileApp
+					+"&_type="+type
+					+"&contentId=" + contentId
+					+"&defaultYN=Y"
+					+"&firstImageYN=Y"
+					+"&mapinfoYN=Y"
+					+"&overviewYN=Y"
+					+"&addrinfoYN=Y";
+
+			json = readURL(url);
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
 		return json.toString();
 	}
 	
@@ -205,6 +230,36 @@ public class TourAPIGetData {
 		}
 			
 		
+		return json.toString();
+	}
+
+	// 지역&분류 조회
+
+	public String getRegionCategoryJsonData(int areaCode, String cat1) {
+		StringBuffer json = new StringBuffer();
+
+		String EncodedRegion;
+		try {
+			//EncodedRegion = URLEncoder.encode(region,"UTF-8");
+			String url = "http://apis.data.go.kr/B551011/KorService/searchKeyword?serviceKey=" + APIkey
+					+"&pageNo="+pageNo
+					+"&numOfRows="+numOfRows
+					+"&MobileOS="+ MobileOS
+					+"&MobileApp="+ MobileApp
+					+"&_type="+type
+					+"&areaCode="+areaCode
+					+"&cat1="+cat1;
+
+			json = readURL(url);
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
+
+
 		return json.toString();
 	}
 	

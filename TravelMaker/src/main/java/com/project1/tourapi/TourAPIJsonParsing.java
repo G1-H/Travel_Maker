@@ -1,4 +1,4 @@
-package com.project1.list;
+package com.project1.tourapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,59 @@ public class TourAPIJsonParsing {
 		
 		return contentIdList;
 	}
-	
+
+	// 조회된 데이터의 상세정보 가져오기
+	public testVo getDetailItem(String json) {
+		testVo vo = new testVo();
+
+		parser = new JSONParser();
+		try {
+			obj = (JSONObject)parser.parse(json);
+			JSONObject respObj = (JSONObject)obj.get("response");
+			JSONObject bodyObj = (JSONObject)respObj.get("body");
+			JSONObject itemsObj = (JSONObject)bodyObj.get("items");
+			JSONArray itemArr = (JSONArray)itemsObj.get("item");
+			JSONObject itemObj = (JSONObject)itemArr.get(0);
+
+			String contentId = (String)itemObj.get("contentid");
+			String contentTypeId = (String)itemObj.get("contenttypeid");
+			String title = (String)itemObj.get("title");
+			String addr1 = (String)itemObj.get("addr1");
+			String addr2 = (String)itemObj.get("addr2");
+			String tel = (String)itemObj.get("tel");
+			String mapx = (String)itemObj.get("mapx");
+			String mapy = (String)itemObj.get("mapy");
+			String firstimage = (String)itemObj.get("firstimage");
+			String firstimage2 = (String)itemObj.get("firstimage2");
+			String overview = (String)itemObj.get("overview");
+			String homepage = (String)itemObj.get("homepage");
+			String mlevel = (String)itemObj.get("mlevel");
+			String sigungucode = (String)itemObj.get("sigungucode");
+			String areacode = (String)itemObj.get("areacode");
+			String cat1 = (String)itemObj.get("cat1");
+			String cat2 = (String)itemObj.get("cat2");
+			String cat3 = (String)itemObj.get("cat3");
+			String createdtime = (String)itemObj.get("createdtime");
+			String modifiedtime = (String)itemObj.get("modifiedtime");
+			String readcount = (String)itemObj.get("readcount");
+			String sigunguname = (String)itemObj.get("sigunguname");
+			String areaname = (String)itemObj.get("areaname");
+
+			vo.setContentID(contentId);
+			vo.setFirstImage(firstimage);
+			vo.setAddr1(addr1);
+			vo.setTel(tel);
+			vo.setHomepage(homepage);
+			vo.setTitle(title);
+			vo.setOverView(overview);
+
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+
+		return vo;
+	}
 	
 	
 	// 공통정보조회리스트를 파싱해 리스트를 반환.
