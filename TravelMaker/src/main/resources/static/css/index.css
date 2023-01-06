@@ -11,19 +11,19 @@ html {
 	color:#555;
 }
 
-ul, #menu {
+#menu, .indexUl {
 	list-style:none;
 }
 
-a {
+.TravelMaker, .indexMyPage, .btnMyTour, .btnMyInfo, .btnReviewBoard, .btnCompanyInfo, .btnFAQ, .btnLogin {
 	text-decoration:none;
 	opacity:0.75;
 	color:#fff;
 }
 
-a:hover {
+.TravelMaker:hover, .indexMyPage:hover, .btnMyTour:hover, .btnMyInfo:hover, .btnReviewBoard:hover, .btnCompanyInfo:hover, .btnFAQ:hover, .btnLogin:hover {
 	opacity:1;
-} 
+}
 
 @keyframes fadeIn {
 	100% {
@@ -31,7 +31,7 @@ a:hover {
 	}
 }
 
-header {
+#IndexHeader {
 	position:absolute;
 	width:100%;
 	
@@ -62,16 +62,15 @@ header {
 	cursor: pointer;
 }
 
-#menu>ul>li>ul{
+#menu>ul>li>#block{
 	width: 80px;
 	display: none;
 	position: absolute;
 }
 
-#menu>ul>li:hover>ul{
+#menu>ul>li:hover>#block{
 	display: block;
 	position:absolute;
-	margin:2px;
 	width: 100px;
 	height: 70px;
 	background-color: #fff;
@@ -83,22 +82,22 @@ header {
 	z-index: 3;
 }
 
-#menu>ul>li:hover>ul a{
+#menu>ul>li:hover>#block .indexMenuA{
 	color:black;
 	font-size:0.8rem;
 }
 
-#menu>ul>li>ul>li:hover{
+#menu>ul>li>#block>.indexMenuLi:hover{
 	text-decoration: underline;
 }
 
 @media (max-width:800px) {
-	header {
+	#indexHeader {
 		padding:20px 50px;
 		flex-direction:column;
 	}
 	
-	header h2 {
+	#indexHeader h2 {
 		margin-bottom:15px;
 	}
 }
@@ -117,7 +116,7 @@ section:not(#hero):nth-child(even) {
 
 @media (max-width:800px) {
 	section {
-		padding:50px 20px;;
+		padding:50px 20px;
 	}
 }
 
@@ -227,8 +226,9 @@ section:not(#hero):nth-child(even) {
   transition: box-shadow .2s;
 }
 
-.button-42:hover {
+#btnSearch:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  opacity: 0.57;
 }
 
 #hero #hero-content #date1,#date2{
@@ -324,7 +324,7 @@ section h3.title {
 	text-align:center;
 }
 
-section p {
+section .sectionP {
 	max-width:775px;
 	line-height:2;
 	padding: 0 20px;
@@ -430,13 +430,13 @@ section p {
 	
 }
 
-#footer{
+#indexFooterContainer{
 	display:flex;
 	flex-direction:column;
 	min-height:50vh;
 }
 
-footer {
+#indexFooter {
 	display:flex;
 	align-items: center;
 	justify-content:space-around;
@@ -444,18 +444,19 @@ footer {
 	color:#fff;
 	padding: 20px 0;
 	margin-top:auto;
+	z-index: 3;
 }
 
-footer ul {
+#indexFooter ul {
 	display:flex;
 }
 
-footer ul li {
+#indexFooter ul li {
 	margin-left:16px;
 	
 }
 
-footer p {
+#indexFooter .indexFooterP {
 	text-transform:uppercase;
 	font-size:14px;
 	opacity:0.6;
@@ -463,12 +464,12 @@ footer p {
 }
 
 @media (max-width:1100px) {
-	footer {
+	#indexFooter {
 		flex-direction:column;
 		margin-bottom:20px;
 	}
 	
-	footer ul li {
+	#indexFooter ul li {
 		 margin: 0 8px;
 	}
 }
