@@ -10,10 +10,8 @@
 	<script src="https://kit.fontawesome.com/59e9622ad2.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 	<script defer src="/js/planner.js"></script>
-	<script defer src="/js/plannerModal.js"></script>
 </head>
 <body>
-	
 	<div id="plannerZone">
 		<div id="MapBucketZone">
 			<div id="modal-wrap" style="display:none;">
@@ -46,7 +44,13 @@
 					<span>순번</span></br>
 					<span><input type="text" size="10"/></span><br/>
 					<span>날짜</span></br>
-					<span><input type="text" size="30"/></span>
+					<span>
+						<select>
+								<option>1일차</option>
+								<option>2일차</option>
+								<option>3일차</option>
+						</select>
+					</span>
 				</div>
 				<div class="modalFooter">
 					<input type="button" value="수정"/>
@@ -82,7 +86,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div id="planListZone">
 			<div id="planListMenu">
 				<div class="planListMenuItem" id="PlanMenuActive">전체</div>
@@ -93,6 +96,16 @@
 			<div id="planList">
 			</div>
 		</div>
+		<a href="#" id="goReview">후기목록</a>
 	</div>
+	<script>
+		function openDateModal(){
+			var plannerDateModal = document.querySelector('#plannerDateModal');
+			var modalWrap = document.querySelector('#modal-wrap');
+			
+			modalWrap.style.display = 'block';
+			plannerDateModal.style.display = 'block';
+		}
+	</script>
 </body>
 </html>

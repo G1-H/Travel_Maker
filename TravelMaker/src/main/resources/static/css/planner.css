@@ -30,9 +30,12 @@ body{
 #MapBucketZone>#MapZone{
 	height:0;
 	flex-basis:55%;
+	
 }
 
 #MapBucketZone>#planBucketListZone{
+	border-radius:10px;
+	
 	height:0;
 	flex-basis:40%;
 	
@@ -61,6 +64,7 @@ body{
 
 #planBucketListMenu>div#BucketMenuActive{
 	background-color: tomato;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	color:#fff;
 	font-weight: bold;
 }
@@ -68,6 +72,13 @@ body{
 #planBucketListZone>#planBucketList{
 	height:90%;
 	overflow-y: auto;
+	border-radius:0 0 10px 10px;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+				rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+				rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+				rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+				rgba(0, 0, 0, 0.07) 0px 16px 16px;
+			
 }
 
 
@@ -99,6 +110,10 @@ body{
 	float:right;
 }
 
+.planBucketItem>span.planBucketItemIcon:hover{
+	color:tomato;
+}
+
 #planBucketXicon {
 	position:relative;
 	right:15px;
@@ -112,13 +127,39 @@ body{
 	width:45%;
 	flex-direction:column;
 	justify-content: center;
+	
 }
 
 #planListZone>#planListMenu{
 	display:flex;
+	position:relative;
 	flex-direction:row;
 	height:5%;
 }
+
+#planListMenu div.planListMenuItem:nth-child(1){
+	position:relative;
+	z-index:4;
+}
+
+#planListMenu div.planListMenuItem:nth-child(2){
+	position:relative;
+	right:50px;
+	z-index:3;
+}
+
+#planListMenu div.planListMenuItem:nth-child(3){
+	position:relative;
+	right:100px;
+	z-index:2;
+}
+
+#planListMenu div.planListMenuItem:nth-child(4){
+	position:relative;
+	right:150px;
+	z-index:1;
+}
+
 
 #planListMenu>div.planListMenuItem{
 	flex-basis:0;
@@ -126,9 +167,10 @@ body{
 	flex-shrink:1;
 	padding:5px;
 	border:1px solid #fff;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px 80px 0 5px;
 	background-color: #F78181;
 	text-align:center;
+	line-height:1.5;
 }
 
 #planListMenu>div.planListMenuItem{
@@ -137,6 +179,7 @@ body{
 
 #planListMenu>div#PlanMenuActive{
 	background-color: tomato;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	color:#fff;
 	font-weight: bold;
 }
@@ -144,6 +187,12 @@ body{
 #planListZone>#planList{
 	height:93%;
 	overflow:auto;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+				rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+				rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+				rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+				rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 #planList>div.planItem{
@@ -325,6 +374,14 @@ body{
 	margin-top:15px;
 }
 
+#plannerModifyModalBody select{
+	width:200px;
+	font-size:2rem;
+	border:none;
+	height:40px;
+	background-color:#eee;
+}
+
 #plannerMemoModal{
 	width:500px;
 	height:350px;
@@ -351,14 +408,18 @@ body{
 	width:350px;
 }
 
-.bucketWindowHeader>div.bwTitle{
+.bucketWindowHeader{
+	background-color:tomato;
+	padding:4px;
 	text-align:center;
+}
+
+.bucketWindowHeader>span{
 	font-size:2rem;
 	font-weight:bold;
 	color:#fff;
-	padding:5px;
-	background-color:tomato;
 }
+
 
 .bucketWindowBody{
 	display:flex;
@@ -379,16 +440,52 @@ body{
 
 .bucketWindowFooter{
 	background-color:tomato;
-	padding:4px;
+	padding:5px;
 	text-align:center;
 	
 }
 
-.bucketWindowFooter>span.bwIcon{
+.bucketWindowFooter>span.bwPlusIcon{
 	display:inline-block;
+	font-size:2rem;
 	color:#fff;
 }
 
-.bucketWindowFooter>span.bwIcon:hover{
+.bucketWindowFooter>span.bwPlusIcon:hover{
 	cursor:pointer;
+	transform: scale(1.5);
+  	transition-duration: 0.3s;
 }
+
+/*customOverlay */
+.customOverlay{
+	background-color: tomato;
+	border-radius: 50%;
+	text-align:center;
+	width:70px;
+	height:70px;
+	color:#fff;
+	font-weight:bold;
+	font-size:2rem;
+	padding-top:15px;
+}
+
+/* 후기목록으로 가기 */
+#goReview{
+	border-radius:50%;
+	line-height:4;
+	width:100px;
+	height:100px;
+	text-align:center;
+	font-weight:bold;
+	font-size:1.5rem;
+	position :fixed;
+	z-index:500;
+	right:5%;
+	bottom:5%;
+	color:#fff;
+	background-color:tomato;
+}
+
+
+

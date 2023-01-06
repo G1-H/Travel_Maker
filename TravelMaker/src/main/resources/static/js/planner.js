@@ -1,12 +1,34 @@
-/**
- * 
- */
-
-
 	
 
+
+
 /*  Map */
-(kakaoMap = function(){
+var kakaoMap = (function(){
+	
+	$('.planBucketMenuItem').on('click',function(ev){
+		var planBucketMenuItem = document.querySelectorAll('.planBucketMenuItem');
+		for(var i=0; planBucketMenuItem.length; i++){
+			if(planBucketMenuItem[i].hasAttribute('id')){
+				planBucketMenuItem[i].removeAttribute('id');
+				break;
+			}
+		}
+		var target = ev.target;
+		target.setAttribute('id','BucketMenuActive');
+	})
+	
+	$('.planListMenuItem').on('click',function(ev){
+		var planListMenuItem = document.querySelectorAll('.planListMenuItem');
+		for(var i=0; planListMenuItem.length; i++){
+			if(planListMenuItem[i].hasAttribute('id')){
+				planListMenuItem[i].removeAttribute('id');
+				break;
+			}
+		}
+		var target = ev.target;
+		target.setAttribute('id','PlanMenuActive');
+	})
+
 	
 	var map = null;
 	var bucketMarkers = [];
@@ -22,12 +44,11 @@
 	};
 	
 	
-	
 	var content = '<div class="bucketWindow">' + 
 				  '    <div class="bucketWindowHeader">' + 
-				  '        <div class="bwTitle">' + 
+				  '        <span class="bwTitle">' + 
 				  ' 		  가나돈까스' + 
-				  '        </div>' + 
+				  '        </span>' + 
 				  '    </div>' +    
 				  '    <div class="bucketWindowBody">' + 
 				  '         <div class="bwImgZone">' +
@@ -38,15 +59,21 @@
 				  '         </div>' + 
 				  '    </div>' + 
 				  '    <div class="bucketWindowFooter">'+
-				  '        <span class="bwIcon" onclick="modalShow()"><i class="fa-regular fa-square-plus fa-xl"></i></span>'+
+				  '        <span class="bwPlusIcon" onclick="openDateModal()"><i class="fa-regular fa-square-plus "></i></span>'+
 				  '    </div>'+
                   '</div>';	
 	
+	
+	var removeable = true;
+	
 	var bucketWindow = new kakao.maps.InfoWindow({
-        content: content // 인포윈도우에 표시할 내용
+        content: content, // 인포윈도우에 표시할 내용
+        removable : removeable 
     });
 	
+	
 	var positions = [
+		 
 		{
 	        title: '가가밀라노 롯데백화점 에비뉴엘 월드타워점', 
 	        latlng: new kakao.maps.LatLng(37.51424591, 127.1040305)
@@ -70,6 +97,8 @@
 	    }
 	];
 	
+	var linePath = [];
+	
 	function initMap(container,options){
 		map = new kakao.maps.Map(container,options)
 	}
@@ -88,32 +117,67 @@
 			 });
 			
 			bucketMarkers.push(marker);
+			linePath.push(positions[i].latlng);
 		}
 	}
 	
-	modalShow = function(){
-		alert('hi!');
-	}
 	
 	$(document).ready(function(){
+		
+		
 		
 		initMap(container,options);
 		setMarkers(positions);
 		
-
+		
 		$('#planBucketList').load('/planner/planBucketList',function(data){
+			
 			$('.planBucketItem').on('click',function(){
-				console.log(bucketWindow);
 				bucketWindow.open(map,bucketMarkers[0])
 			})
+			
+			
+			
 		});
 		
 		$('#planList').load('/planner/planList',function(data){
+			var polyline = new kakao.maps.Polyline({
+			    path: linePath, // 선을 구성하는 좌표배열 입니다
+			    strokeWeight: 8, // 선의 두께 입니다
+			    strokeColor: 'tomato', // 선의 색깔입니다
+			    strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+			    strokeStyle: 'solid' // 선의 스타일입니다
+			});
+			
+			$('.planListMenuItem').on('click',function(){
+				
+				for(var i=0; i<positions.length; i++){
+					
+					
+					// 커스텀 오버레이를 생성합니다
+					var customOverlay = new kakao.maps.CustomOverlay({
+					    position: positions[i].latlng,
+					    content: '<div class="customOverlay">' +
+					    				(i+1) +
+					    		 '</div>' 
+					});
+					
+					customOverlay.setMap(map);
+					bucketMarkers[i].setMap(null);
+					
+				}; // end of for
+				
+				polyline.setMap(map);
+				
+			}); // end of onclick
+				
 				
 		});
 	})
 	
 	
 	
+	
 })();
- 
+
+

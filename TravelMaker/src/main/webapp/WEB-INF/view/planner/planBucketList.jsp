@@ -12,11 +12,12 @@
 <body>
 	<c:forEach begin="1" end="15">
 		<div class="planBucketItem">
-			<span class="planBucketItemTitle">역전 할머니맥주</span>
+			<span class="planBucketItemTitle">가나돈까스</span>
 			<span class="planBucketItemType">맛집</span><br/>
-			<span class="planBucketItemAddr">샤로수길 444번지 </span>
+			<span class="planBucketItemAddr">합정역 8번출구</span>
 			<span class="planBucketItemIcon"><i class="fa-solid fa-xmark fa-2xl" id="planBucketXicon"></i></span>
 		</div>
 	</c:forEach>
 </body>
+
 </html>

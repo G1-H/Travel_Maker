@@ -1,19 +1,11 @@
-/**
- * Modal제어
- */
- 
-(modal = function(){
+	/* MODAL 제어 */
 	
 	var plannerModal = document.querySelectorAll('.plannerModal');
-	var plannerDateModal = document.querySelector('#plannerDateModal');
 	var plannerModifyModal = document.querySelector('#plannerModifyModal');
 	var plannerMemoModal = document.querySelector('#plannerMemoModal');
 	var modalWrap = document.querySelector('#modal-wrap');
 	
 	
-	$('.MapZone').on('click',function(){
-		modalShow(plannerDateModal);
-	})
 	
 	$('.planItemDataZone').on('click',function(ev){
 		modalShow(plannerModifyModal);
@@ -47,4 +39,6 @@
 		}
 	}
 	
-})();
+	
+	
+	
