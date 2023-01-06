@@ -15,8 +15,8 @@
 	<div id="mplanner">
 		<div class="mListContainer">
 			<div id="button_container">
-				<input type='button' id="mPlanBucketList" class="clickbtn" value="Bucket"/>
-				<input type='button' id="mPlanList" class="nonclickbtn" value="Plan" onclick="ListClicked()"/>
+				<input type='button' id="mPlanBucketList" class="clickbtn" value="Bucket" onclick="BucketBtnClicked()"/>
+				<input type='button' id="mPlanList" class="nonclickbtn" value="Plan" onclick="PlanClicked()"/>
 			</div>
 			<div class='mList'>
 			</div>

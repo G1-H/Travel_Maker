@@ -37,43 +37,71 @@ $( document ).ready(function() {
 	];
 			
 		// 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
-		var bounds = new kakao.maps.LatLngBounds();    
-			
-		for (var i = 0; i < positions.length; i ++) {
-			   // 마커를 생성합니다
-			 var marker = new kakao.maps.Marker({
-			     map: map, // 마커를 표시할 지도
-			     position: positions[i].latlng, // 마커를 표시할 위치
-			     title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-			 });
-		    bounds.extend(positions[i].latlng);
-		    map.setBounds(bounds);
-		    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-			//kakao.maps.event.addListener(marker, 'mouseover', makeInfo(map, marker));
-		    
-		} // for문의 끝
-	
-		BucketClicked = function(frm){
+		var bounds = new kakao.maps.LatLngBounds();
+		var markers=[];    
+		var linepath = [];
+		
+		// 버킷버튼 클릭, 커스텀 출력 및 지도 범위 설정
+		BucketBtnClicked= function(){
+		
+			for (var i = 0; i < positions.length; i ++) {
+				 // 마커를 생성합니다
+				 var marker = new kakao.maps.Marker({
+				     map: map, // 마커를 표시할 지도
+				     position: positions[i].latlng, // 마커를 표시할 위치
+				     title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+				 });
+				
+			    bounds.extend(positions[i].latlng);
+			    map.setBounds(bounds);
+			    linepath.push(positions[i].latlng);
+			    markers.push(marker);
+			} // for문의 끝
+		}
+		BucketBtnClicked();
+		
+		// 리스트 클릭시
+		ListClicked = function(frm){
 			// 이동할 위도 경도 위치를 생성합니다 
 		    var moveLatLon = new kakao.maps.LatLng(37.51424591, 127.1040305);
 		    
-		    // 지도 중심을 부드럽게 이동시킵니다
-		    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+		    map.setLevel(3);
 		    map.panTo(moveLatLon);   
 		}
-		ListClicked= function(){
-			var content = '<div class ="label"><span class="left"></span><span class="center">카카오!</span><span class="right"></span></div>';
-			var customOverlay = new kakao.maps.CustomOverlay({
-	    		position: new kakao.maps.LatLng(37.5099674377, 127.0377755568),
-	    		content: content   
-			});
-						
-			// 커스텀 오버레이를 지도에 표시합니다
-			customOverlay.setMap(map);
-		}
-	});        
+		
+		// 일정버튼 클릭, 커스텀 출력 및 지도 범위 설정
+		PlanClicked= function(){
+		
+			for(var i =0;i<markers.length;i++){
+				
+				markers[i].setMap(null);
+				var content = '<div class ="customoverlay">'+ (i+1) +'</div>';
+				var customOverlay = new kakao.maps.CustomOverlay({
+		    			position: positions[i].latlng,
+		    			content: content   
+		    		
+				}); //end Customoverlay
+							
+			    map.setBounds(bounds);
+			    
+				// 커스텀 오버레이를 지도에 표시합니다
+				customOverlay.setMap(map);
+		}//endfor
+
+
+		//폴리라인 출력
+		var polyline = new kakao.maps.Polyline({
+		    path: linepath, // 선을 구성하는 좌표배열 입니다
+		    strokeWeight: 3, // 선의 두께 입니다
+		    strokeColor: 'tomato', // 선의 색깔입니다
+		    strokeOpacity: 0.5, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+		    strokeStyle: 'solid' // 선의 스타일입니다
+		});
+		
+		// 지도에 선을 표시합니다
+		polyline.setMap(map);  
+	};
+})        
 	$('#mPlanBucketList').on('click', function(){
 		$('#mPlanBucketList').attr("class","clickbtn");
 		$('#mPlanList').attr("class","nonclickbtn");

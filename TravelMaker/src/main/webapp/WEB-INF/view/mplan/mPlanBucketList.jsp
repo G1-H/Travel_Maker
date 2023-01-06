@@ -21,7 +21,7 @@
 		</div>
 	</div>
 		<% for(int i=0;i<20;i++){ %>
-		<div class='Bucketitem' onclick="BucketClicked(this)">
+		<div class='Bucketitem' onclick="ListClicked(this)">
 				<img src="img/testimage.jpg" class="bucketImg">
 				<div class="bucketInfo">
 					<div class="bucketTitle">섬진강</div>

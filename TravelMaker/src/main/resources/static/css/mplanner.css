@@ -254,3 +254,21 @@
 	color:#fff;
 	background-color:tomato;
 }
+.customoverlay{
+	text-align:center;
+	width:5vw;
+	height:5vw;
+	line-height:5vw;
+	color:white;
+	background-color:tomato;
+	border-radius:50%;
+}
+.customoverlay1{
+	text-align:center;
+	width:5vw;
+	height:5vw;
+	line-height:5vw;
+	color:white;
+	background-color:darkblue;
+	border-radius:50%;
+}

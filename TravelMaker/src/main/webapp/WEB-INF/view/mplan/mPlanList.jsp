@@ -18,7 +18,7 @@
 		<div class="planDay" id="day1">Day1</div> 
 	</div>	
 		<% for(int i=0;i<10;i++){ %>
-		<div class='Planitem' onclick='modalView2(this)'>
+		<div class='Planitem' onclick='modalView2(this); ListClicked(this);'>
 				<div class="planSerial"><%=i+1 %></div>
 				<div class="planInfo">
 					<div class="planTitle">섬진강</div>
@@ -37,7 +37,7 @@
 	</div>	
 		<% for(int i=0;i<10;i++){ %>
 		<form>
-		<div class='Planitem' onclick='modalView2(this)'>
+		<div class='Planitem' onclick='modalView2(this); ListClicked(this);'>
 				<div class="planSerial"><%=i+1 %></div>
 				<div class="planInfo">
 					<div class="planTitle">섬진강</div>
