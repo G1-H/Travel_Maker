@@ -5,7 +5,7 @@
 			}
 		#map{
 			min-width:100vw;
- 			min-height:23vh;
+ 			min-height:20vh;
 		}
 		.mListContainer{
 			margin:1vh;
@@ -17,7 +17,7 @@
 		}
 		input#mPlanList, input#mPlanBucketList{
 			height:50px;
-			font-size:2rem;
+			font-size:1.5rem;
 			border-radius: 20px 20px 0 0;
 		}
 		input#mPlanList:hover, input#mPlanBucketList:hover{
@@ -29,7 +29,7 @@
 			border-right: black 1px solid;
 			border-bottom: black 1px solid;
 			overflow-y:auto;
-			height:38vh;
+			height:35vh;
 		}
 		.clickbtn{
 			background-color:tomato;
@@ -49,13 +49,13 @@
 		/* 암호를 입력하는 modal box */
 
 #modal, #modal2, #modal3{
-position: fixed;
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 99;
 	display:none;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 #modalBack, #modalBack2, #modalBack3{
@@ -69,10 +69,10 @@ position: fixed;
 }
 
 #modal>#content1, #modal2>#content2{
-	width: 80%;
-	min-height:20%;	
+	width: 80vw;
+	min-height:20vh;	
 	border-radius:30px;
-	margin: 1000px auto;
+	margin: 45vh auto;
 	z-index:101;
 	padding: 40px;
 	position: relative;
@@ -80,10 +80,10 @@ position: fixed;
 	background-color: #fff;
 }
 #modal3>#content3{
-	width: 80%;
-	min-height:20%;	
+	width: 80vw;
+	min-height:15vh;	
 	border-radius:30px;
-	margin: 1200px auto;
+	margin: 50vh auto;
 	z-index:101;
 	padding: 40px;
 	position: relative;
@@ -92,7 +92,7 @@ position: fixed;
 }
 #modal>#content1>#btnClose, #modal2>#content2>#btnClose2, #modal3>#content3>#btnClose3{
 	position: absolute;
-	font-size:40px;
+	font-size:2rem;
 	margin-right:30px;
 	margin-top:30px;
 	right:2px;
@@ -102,30 +102,30 @@ position: fixed;
 }
 .locationTitle{
 	margin:10%;
-	font-size:50px;
+	font-size:2rem;
 	display:inline-block;
 }
 .UpdateSubTitle{
-	font-size:30px;
+	font-size:1rem;
 }
 
 #modal2 .UpdatePlanSerial{
-	width:250px;
-	font-size:30px;
+	width:3vw;
+	font-size:1rem;
 }
 .MemoArea{
-	height:150px;
+	height:10vh;
 	width:80%;
 }
 #modal>#content1 select, #modal2>#content2 select{
 	margin-top:5%;
-	width: 300px;
-	font-size:30px;
+	width: 60vw;
+	font-size:1rem;
 	margin-bottom:10%;	
 }
 #modal>#content1 #btnCheck, #modal2>#content2 #btnCheck2, #modal3>#content3 #btnCheck3{
-	width: 300px;
-	font-size:30px;
+	width: 60vw;
+	font-size:1rem;
 	background-color:tomato;
 	color:white;
 	border-radius:10px;
@@ -145,12 +145,12 @@ position: fixed;
 		padding-left:1vh;
 	}
 	.bucketTitle{
-		font-size:2.4rem;
+		font-size:1.5rem;
 		margin-top:2vh;
 		margin-bottom:1vh;
 	}
 	.bucketgubun{
-		font-size:1.4rem;
+		font-size:1rem;
 		color: darkgray;
 	}
 	.bucketbtn{
@@ -174,8 +174,8 @@ position: fixed;
 	}
 	.bucketFilter{
 		color:gray;
-		font-size:25px;
-		margin-right: 100px;
+		font-size:0.5rem;
+		margin-right: 10vw;
 	}
 
 	.Planitem{
@@ -186,17 +186,17 @@ position: fixed;
 		grid-template-columns:repeat(3,1fr);
 	}
 	.planDay{
-		font-size:2em;
+		font-size:1.5rem;
 	}
 	.planSerial{
-		font-size:2rem;
+		font-size:1.5rem;
 		margin:auto;
 	}
 	.planInfo{
 		padding-left:1vh;
 	}
 	.planTitle{
-		font-size:2rem;
+		font-size:1.5rem;
 	}
 	.plangubun{
 		font-size:1rem;
@@ -210,13 +210,16 @@ position: fixed;
 		justify-items:end;
 		grid-template-rows :1fr 10px;
 	}
+	.PlanMemo div{
+		font-size:0.5rem;
+	}
 	.PlanMemoItem{
 		width:15%;
 	}
 	#FiltersContainer{
 		display:grid;
-		min-height:50px;
-		margin-top:10px;
+		min-height:1.8vh;
+		margin-top:0.3vh;
 		justify-items:end;
 	}
 	.planFilters{
@@ -225,8 +228,8 @@ position: fixed;
 	.planFilter{
 		display:inline-block;
 		color:gray;
-		margin-right: 80px;
-		font-size:25px;
+		margin-right: 10vw;
+		font-size:0.5rem;
 	}
 	.planDays{
 		background-color:rgba(255, 99, 71, 0.5);
@@ -235,3 +238,19 @@ position: fixed;
 		text-align:center;
 		padding: 10px;
 	}
+	#goReview{
+	border-radius:50%;
+	line-height:4;
+	width:10vw;
+	height:10vw;
+	text-align:center;
+	font-weight:bold;
+	font-size:0.5rem;
+	text-decoration:none;
+	position :fixed;
+	z-index:500;
+	right:5%;
+	bottom:35vh;
+	color:#fff;
+	background-color:tomato;
+}

@@ -10,19 +10,18 @@
 	<script defer src='js/mplan.js'></script>
 </head>
 <body>
-<div id="map" style="width:500px;"></div>
+<div id="map"></div>
 
 	<div id="mplanner">
 		<div class="mListContainer">
 			<div id="button_container">
 				<input type='button' id="mPlanBucketList" class="clickbtn" value="Bucket"/>
-				<input type='button' id="mPlanList" class="nonclickbtn" value="Plan"/>
+				<input type='button' id="mPlanList" class="nonclickbtn" value="Plan" onclick="ListClicked()"/>
 			</div>
 			<div class='mList'>
 			</div>
 		</div>
 	</div>
-	
 	<div id='modal'>
 		<div id="modalBack"></div>
 		<div id='content1'>
@@ -60,5 +59,7 @@
 			<input type='button' value='수정' id='btnCheck3'onclick="memoInsert(this)"/>
 		</div>
 	</div>
+	
+	<a href="#" id="goReview">후기목록</a>
 </body>
 </html>

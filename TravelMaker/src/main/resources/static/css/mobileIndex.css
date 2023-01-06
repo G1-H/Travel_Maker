@@ -7,7 +7,7 @@
 }
 
 html {
-	font: normal 16px Raleway;
+	font: normal 10px Raleway;
 	color:#555;
 }
 
@@ -34,12 +34,11 @@ html {
 #IndexHeader {
 	position:absolute;
 	width:100%;
-	
-	display:flex;
-	justify-content:space-between;
+	gap:1vw;
+	display:grid;
 	align-items:center;
-	
-	padding: 35px 100px 0;
+	grid-template-columns: 1vw auto 1fr 1vw;
+	padding: 4vh 1vw 0;
 	opacity:0;
 	animation: fadeIn 1s  0.5s forwards ease-in;
 	color:#fff;
@@ -49,12 +48,14 @@ html {
 #menu {
 	margin-right: -15px;
 	line-height:30px;
+	justify-self : end;
 }
 
-#menu>ul>li{
+#menu>ul>li{ 
 	float: left;
-	width: 120px;
-	margin: 0 15px;
+	font-size: 0.5em;
+	width: fit-content;
+	margin: 0 1vw;
 	position: relative;
 }
 
@@ -118,25 +119,22 @@ section:not(#hero):nth-child(even) {
 	position:relative;
 	justify-content:center;
 	text-align:center;
-	min-height:100vh;
+	min-height:50vh;
 	color:#fff;
 }
 
 #hero #hero-content{
-	position: absolute;
-	margin:auto;
-	width: 630px;
-	height: 230px;
+	width: 80vw;
+	min-height: 25vh;
 	background: #F59651;
+	font-size:0.6em;
 	opacity:0;
-	padding:30px;
+	padding:2vh 9vw;
 	animation: fadeIn 1s  0.5s forwards ease-in;
 	display: grid;
 	grid-template-areas:
-		"  .	 startDate endDate people"
-		" start  date1	  date2    su  "
-		"  .	 amPm1	  amPm2	   	.  "
-		"  .     button button		.  ";
+	". start ." "startDate date1 date1"
+	". amPm1 amPm1" "endDate date2 date2" ". amPm2 amPm2" "people su ." "button button button";
 	gap:10px;
 }
 
@@ -192,8 +190,8 @@ section:not(#hero):nth-child(even) {
   cursor: pointer;
   display: inline-block;
   font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-  height: 40px;
-  line-height: 40px;
+  height: 3vh;
+  line-height: 3vh;
   outline: 0;
   overflow: hidden;
   padding: 0 20px;
@@ -219,7 +217,7 @@ section:not(#hero):nth-child(even) {
 #hero #hero-content #date1,#date2{
 	border:none;
 	border-radius:10px;
-	height: 25px;
+	height: 1vh;
 	padding:10px;
 	line-height: 25px;
 	width:100%
@@ -392,4 +390,8 @@ section .sectionP {
 	font-size:14px;
 	opacity:0.6;
 	align-self:center;
+}
+
+.TravelMaker{
+	font-size:2.5rem;
 }

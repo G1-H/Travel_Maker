@@ -5,10 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>index.jsp</title>
-<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" media="screen and (min-width :450px)" href="css/index.css"/>
+<link rel="stylesheet" media="screen and (max-width :450px)" href="css/mobileIndex.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
-
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 
 <!-- include summernote css/js -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet"> 
@@ -19,7 +21,8 @@
 </head>
 <body>
 <header id='IndexHeader'>
-<h2><a href="#" class='TravelMaker'>Travel Maker</a></h2>	
+<div id='IndexHeader_blank'></div>
+<h2><a href="/" class='TravelMaker'>Travel Maker</a></h2>	
 <div id='menu'>
 	<ul class='indexUl'>
 		<li><a href="#" class='indexMyPage'>마이페이지</a>
@@ -36,6 +39,7 @@
 	</ul>		
 
 </div>
+<div id='IndexHeader_blank'></div>
 </header>
 <div id='empty'></div>
 <div id='content'>
